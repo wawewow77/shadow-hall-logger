@@ -112,9 +112,11 @@ module.exports = async function handler(req, res) {
 			});
 		}
 
-		return res.status(200).json({
-			success: true
-		});
+return res.status(200).json({
+	success: true,
+	message: "Discord webhook berhasil dikirim",
+	discordStatus: discordResponse.status
+});
 
 	} catch (error) {
 		console.error("Server Error:", error);
